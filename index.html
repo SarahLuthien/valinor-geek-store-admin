@@ -16,8 +16,7 @@
 
   <link rel="shortcut icon" href="https://i.imgur.com/gY52b0d.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body class="antialiased">
@@ -52,8 +51,6 @@
           </tr>
         </thead>
         <tbody id="product-table-body">
-          <!-- Linhas da tabela inseridas via JavaScript -->
-          <!-- Exemplo de estado de carregamento -->
           <tr>
             <td colspan="3" class="text-center p-8 text-gray-500">Carregando produtos...</td>
           </tr>
@@ -69,8 +66,9 @@
     </div>
   </footer>
 
-  <!-- MODAL DE ADICIONAR/EDITAR PRODUTO  -->
-  <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  <!-- MODAL DE ADICIONAR/EDITAR PRODUTO -->
+  <div id="productModal" aria-hidden="true" role="dialog"
+    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
     <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md animate-fade-in-up">
       <div class="flex justify-between items-center mb-6">
         <h3 id="modalTitle" class="text-2xl font-bold">Adicionar Novo Produto</h3>
@@ -107,8 +105,9 @@
     </div>
   </div>
 
-  <!-- MODAL DE CONFIRMAÇÃO DE EXCLUSÃO  -->
-  <div id="deleteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  <!-- MODAL DE CONFIRMAÇÃO DE EXCLUSÃO -->
+  <div id="deleteModal" aria-hidden="true" role="dialog"
+    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
     <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md text-center animate-fade-in-up">
       <h3 class="text-xl font-bold mb-4">Confirmar Exclusão</h3>
       <p id="deleteModalText" class="mb-6">Você tem certeza que deseja excluir este produto?</p>
@@ -123,14 +122,9 @@
   </div>
 
   <!-- NOTIFICAÇÃO (Toast) -->
-  <div id="toast"
-    class="fixed top-5 right-5 bg-green-500 text-white py-4 px-6 rounded-lg shadow-xl z-50 opacity-0 transform -translate-y-3 transition-all duration-300 ease-out pointer-events-none">
-    <p id="toast-message" class="font-medium"></p>
-  </div>
+  <div id="toast-container" aria-live="polite" class="fixed top-5 right-5 z-50 space-y-2"></div>
 
-
-  <script src="js/admin_scripts.js" type="module"></script>
-
+  <script src="./js/admin_scripts.js" type="module"></script>
 </body>
 
 </html>
