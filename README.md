@@ -23,7 +23,7 @@ O projeto utiliza uma **API REST falsa** (MockAPI) para armazenar os dados dos p
 ---
 
 ## 🌐 Versão Demo
-Acesse a versão online do projeto aqui: [Valinor Geek Store Demo](https://sua-demo-no-vercel.vercel.app)
+Acesse a versão online do projeto aqui: [Valinor Geek Store Demo](https://valinor-geek-store-admin.vercel.app/)
 
 ---
 
